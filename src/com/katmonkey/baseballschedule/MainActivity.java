@@ -1,13 +1,18 @@
 package com.katmonkey.baseballschedule;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.widget.CursorAdapter;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.widget.ArrayAdapter;
-import android.app.ListActivity;
-import android.app.LoaderManager;
-import android.content.Loader;
 
 
-public class MainActivity extends ListActivity implements LoaderManager.LoaderCallbacks<ArrayAdapter>{
+
+
+public class MainActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<ArrayAdapter>{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
