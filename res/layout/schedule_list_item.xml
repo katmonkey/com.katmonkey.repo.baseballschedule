@@ -5,22 +5,27 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
     
-    <TextView 
+    <TextView
     	android:id="@+id/date"
     	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="right"
+    	android:gravity="right"
     	android:padding="10dp" />
     <TextView 
         android:id="@+id/awayTeamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp" />
-    <TextView 
+
+    <TextView
         android:id="@+id/atSymbol"
-        android:text="\@"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp" />
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:text="\@" />
+
     <TextView 
         android:id="@+id/homeTeamName"
         android:layout_width="wrap_content"

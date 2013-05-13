@@ -24,13 +24,14 @@ public class MainFragment extends ListFragment implements LoaderManager.LoaderCa
 		//dataColumns are the columns in the database that we need the
 		// values from
 		String[] dataColumns = { "DATE", "AWAY_TEAM_NAME", "HOME_TEAM_NAME" };
+		String[] selectColumns = { "_id", "DATE", "AWAY_TEAM_NAME", "HOME_TEAM_NAME"};
 		
 		//viewIds are the XML View ids that display the data from
 		// dataColumns
 		int[] viewIds = { R.id.date, R.id.awayTeamName, R.id.homeTeamName };
 		
 		db = ScheduleDBHelper.getInstance(getActivity().getApplicationContext());
-		cursor = db.query(false, "GAME", null, null, null, null, null, null, null);
+		cursor = db.query(false, "GAME", selectColumns, null, null, null, null, null, null);
 		adapter = new SimpleCursorAdapter(getActivity(), R.layout.schedule_list_item, cursor, dataColumns, viewIds, 0);
 		setListAdapter(adapter);
 		
