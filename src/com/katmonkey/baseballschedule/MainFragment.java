@@ -31,7 +31,7 @@ public class MainFragment extends ListFragment implements LoaderManager.LoaderCa
 		int[] viewIds = { R.id.date, R.id.awayTeamName, R.id.homeTeamName };
 		
 		db = ScheduleDBHelper.getInstance(getActivity().getApplicationContext());
-		cursor = db.query(false, "GAME", selectColumns, null, null, null, null, null, null);
+		cursor = db.query(false, "SCHEDULE_MASTER", selectColumns, null, null, null, null, null, null);
 		adapter = new SimpleCursorAdapter(getActivity(), R.layout.schedule_list_item, cursor, dataColumns, viewIds, 0);
 		setListAdapter(adapter);
 		
