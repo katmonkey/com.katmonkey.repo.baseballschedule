@@ -9,7 +9,8 @@
     android:baselineAligned="false"
     tools:context=".MainActivity" >
 
-    <fragment android:name="com.katmonkey.baseballschedule.MainFragment"
+    <fragment
+        android:name="com.katmonkey.baseballschedule.MainFragment"
         android:id="@+id/scheduleListFragment"
         android:layout_weight="1"
         android:layout_width="0dp"
